@@ -19,5 +19,4 @@ jobs:
       - env:
           ITB_URL: ${{ vars.ITB_URL }}
         run: |
-          echo $ITB_URL
-          python upload.py --url $ITBUrl build/
+          python upload.py --url $ITB_URL build/
