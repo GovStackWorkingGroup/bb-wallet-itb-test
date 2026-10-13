@@ -1,12 +1,25 @@
 ---
-name: Wallet Specification
-description: Wallet specification (description)
+name: Wallet
+abstract: |
+  The Wallet Building Block (Wallet BB) provides standardized specifications for building Digital Credential Wallets. This building block aims to streamline and simplify the issuance, verification, storage, and retrieval of Verifiable Credentials in a decentralized and privacy-centric manner, ensuring that digital credentialing is secure, efficient, and scalable.
 url: https://specs.govstack.global/wallet/
-repository: https://github.com/govStackWorkingGroup/bb-wallet
-publication_id: govstack:spec:wallet
-working_group: govstack:wg:wallet
+repository: https://github.com/GovStackWorkingGroup/bb-wallet
+urn: govstack:spec:bb:wallet
+owner_group: govstack:wg:cfid
 versions:
-  - version: 1.0
-    url_suffix: /bb-wallet/1.0
+  - version: 1.0.0-rc
+    release_date: 2025-05
+    url_suffix: /wallet-1.0.0-rc
+    short_description:
+  - version: 1.0.0
+    release_date: 2025-09
+    url_suffix: /wallet-1.0.0
+    short_description:
+  - version: 1.1.0
+    release_date: 2025-12
+    url_suffix: /1.1.0
+    short_description:
+  - version: 1.2.0
+    release_date: 2026-05
+    short_description:
     latest: true
-    short_description: Wallet 1.0
