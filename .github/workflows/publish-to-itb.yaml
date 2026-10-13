@@ -12,4 +12,6 @@ jobs:
       - run: |
           curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/cli.py -o cli.py
       - run: |
-          python cli.py --help
+          python cli.py -o build src/
+      - run: |
+          ls -lah build/
