@@ -18,5 +18,8 @@ jobs:
           pip install requests
       - env:
           ITB_URL: ${{ vars.ITB_URL }}
+          ITB_ORG_KEY: ${{ secrets.ITB_ORG_KEY }}
+          ITB_GROUP_KEY: ${{ secrets.ITB_GROUP_KEY }}
+          ITB_DOMAIN_KEY: ${{ secrets.ITB_DOMAIN_KEY }}
         run: |
           python upload.py --url $ITB_URL build/
