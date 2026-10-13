@@ -1,0 +1,12 @@
+---
+name: Wallet Specification
+description: Wallet specification (description)
+url: https://specs.govstack.global/wallet/
+repository: https://github.com/govStackWorkingGroup/bb-wallet
+publication_id: govstack:spec:wallet
+working_group: govstack:wg:wallet
+versions:
+  - version: 1.0
+    url_suffix: /bb-wallet/1.0
+    latest: true
+    short_description: Wallet 1.0
