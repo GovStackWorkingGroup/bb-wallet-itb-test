@@ -6,12 +6,18 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v6
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
       - run: |
-          curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/cli.py -o cli.py
+          curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/cli.py -o convert.py
       - run: |
-          python cli.py -o build src/
+          python convert.py -o build src/
       - run: |
           ls -lah build/
+      - run: |
+          curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/bin/upload.py -o upload.py
+      - run: |
+          pip install requests
+      - env:
+          ITB_URL: ${{ vars.ITB_URL }}
+        run: |
+          echo $ITB_URL
+          python upload.py --url $ITBUrl build/
