@@ -7,13 +7,13 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
       - run: |
-          curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/cli.py -o convert.py
+          curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/convert.py -o convert.py
       - run: |
           python convert.py -o build src/
       - run: |
           ls -lah build/
       - run: |
-          curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/bin/upload.py -o upload.py
+          curl https://codeberg.org/categulario/govstack-itb-integration/raw/branch/main/src/itb_integration/upload.py -o upload.py
       - run: |
           pip install requests
       - env:
