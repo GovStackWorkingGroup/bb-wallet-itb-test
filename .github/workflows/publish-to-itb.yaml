@@ -7,4 +7,4 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
       - name: Run the sctipt
-        uses: GovstackWorkingGroup/itb-integration@16f4a6d
+        uses: GovstackWorkingGroup/itb-integration@16f4a6d60d8af1a6e629269b5a80ca82bde87061
