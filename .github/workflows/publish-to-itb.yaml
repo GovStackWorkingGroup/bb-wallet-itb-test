@@ -7,7 +7,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v6
       - name: Run the sctipt
-        uses: GovstackWorkingGroup/itb-integration@828ae0a9147bf39152397fc892b1ede21b2fca0a
+        uses: GovstackWorkingGroup/itb-integration@35c2f0847badecbf14d1236f4501ccf25c2b9901
         with:
           src-path: ./src/
           itb-url: http://testbed.govstack.global:9000/api/rest
+          itb-org-key: ${{ secrets.ITB_ORG_KEY }}
+          itb-group-key: ${{ secrets.ITB_GROUP_KEY }}
+          itb-domain-key: ${{ secrets.ITB_DOMAIN_KEY }}
