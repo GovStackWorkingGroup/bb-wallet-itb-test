@@ -1,7 +1,7 @@
 name: Publish as ITB test suites
 on: [push]
 jobs:
-  Publish:
+  Publish to staging:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository code
@@ -10,7 +10,7 @@ jobs:
         uses: GovstackWorkingGroup/itb-integration@c89cb431ad0837b5c25c0d23fa9c2509f1a2070f
         with:
           src-path: ./src/
-          itb-url: http://testbed.govstack.global:9000/api/rest
-          itb-org-key: ${{ secrets.ITB_ORG_KEY }}
-          itb-group-key: ${{ secrets.ITB_GROUP_KEY }}
-          itb-domain-key: ${{ secrets.ITB_DOMAIN_KEY }}
+          itb-url: https://testbed-staging.govstack.global/api/rest
+          itb-org-key: ${{ secrets.ITB_STAGING_ORG_KEY }}
+          itb-group-key: ${{ secrets.ITB_STAGING_GROUP_KEY }}
+          itb-domain-key: ${{ secrets.ITB_STAGING_DOMAIN_KEY }}
